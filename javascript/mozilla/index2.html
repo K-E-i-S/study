@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <lang="jp">
+    <head>
+    </head>
+
+
+
+    <body>
+        <h1>Hello world! </h1>
+
+        <script>
+            let shopping = ['パン', '牛乳', 'チーズ', 'ハム', 'めろん'];
+            console.log(shopping);
+            
+            let sequence = [1, 1, 2, 3, 5, 8, 13,];
+            let random = [ 'tree', 795, [0, 1, 2]];
+            
+
+            console.log(shopping[0]);
+            shopping[0] = 'タヒーニ';
+            shopping;
+
+            for(let i = 0; i < sequence.length; i++) {
+                            console.log(sequence[i]);
+                        };
+
+            let myData = '札幌, 仙台, 東京, 名古屋, 大阪,博多';
+            let myArray = myData.split(',');
+            myArray;
+
+            let myNewString = myArray.join('!');
+            myNewString;
+
+            myArray.unshift('奈良');
+            let removeItem = myArray.shift();
+
+            let text = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day';
+            console.log('indexOf' + text.indexOf(':insert'));
+            console.log('testOF' + text.slice(33 , 42));
+
+        </script>
+        
+    </body>
+
+    
+</html>
