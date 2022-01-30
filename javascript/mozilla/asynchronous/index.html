@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>My test page</title>
+    </head>
+    <body>
+        <p>This is my page</p>
+        <script>
+            let a = fetchAndDecode('coffee.jpeg', 'blob');
+            let b = fetchAndDecode('tea.jpeg', 'blob');
+            let c = fetchAndDecode('description.txt', 'text');
+
+
+            function fetchAndDecode(url, type) {
+                            return fetch(url).then(response => {
+                                            if(!response.ok) {
+                                                            throw new Error (`HTTP error! status: ${response.status}`);
+                                                        } else {
+                                                                        if(type === 'blob') {
+                                                                                        return response.blob();
+                                                                                    } else if (type === 'text') {
+                                                                                                    return responce.text();
+                                                                                                }
+                                                                    }
+                                        }).catch(e => {
+                                                        console.log(`there has been "${url}:` + e.message);
+                                                    });
+                        }
+
+
+
+                            Promise.all([a, b, c]).then(values => {
+                                console.log(values);
+                                console.log(values[0]);
+                                let objectURL1 = URL.createObjectURL(values[0]);
+                                let objectURL2 = URL.createObjectURL(values[1]);
+                                let descText = values[2];
+
+                                let image1 = document.createElement('img');
+                                let image2 = document.createElement('img');
+                                image1.src = objectURL1; 
+                                console.log(image1.src);
+                                image2.src = objectURL2; 
+                                document.body.appendChild(image1); 
+                                document.body.appendChild(image2); 
+
+
+                                let para = document.createElement('p');
+                                para.textContet = descText;
+                                document.body.appendChild(para); 
+
+                              });
+
+        </script>
+    </body>
+</html>
