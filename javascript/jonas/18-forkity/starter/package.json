@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fractional": "^1.0.0",
     "parcel": "^2.2.1"
   },
   "devDependencies": {
