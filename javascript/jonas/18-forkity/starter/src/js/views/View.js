@@ -64,7 +64,6 @@ export default  class View {
 
 
     renderError(message = this._errorMessage) {
-        console.log(message);
         const markup = `
             <div class="error">
                 <div>
@@ -77,12 +76,11 @@ export default  class View {
         `;
         this._clear();
         this._parentElement.insertAdjacentHTML('afterbegin', markup);
-        console.log(this._parentElement);
-    }
+    };
 
-    renderMessage(message = this._errorMessage) {
+    renderMessage(message = this._message) {
         const markup = `
-            <div class="recipe">
+            <div class="message">
                 <div>
                     <svg>
                     <use href="${icons}#icon-smile"></use>
@@ -93,5 +91,5 @@ export default  class View {
         `;
         this._clear();
         this._parentElement.insertAdjacentHTML('afterbegin', markup);
-    }
+    };
 };
