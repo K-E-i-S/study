@@ -11,16 +11,3 @@ body {
     margin: 0;
 }
 
-
-.countdown-container {
-    display: flex;
-}
-
-.countdown-el{
-    text-align: center;
-
-}
-.big-text {
-    margin: 0 3rem;
-    font-size: 5rem;
-}

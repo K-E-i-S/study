@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+h1{
+    background-color: orange;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.quiz-container {
+    background-color: orange;
+    width: 30%;
+    height: auto;
+}
+
+.quiz__buttom {
+    background-color: paleturquoise;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+   transition-duration: 0.2s ;
+}
+
+.quiz__buttom:hover {
+    background-color: powderblue;
+}
+
+.quiz__buttom:active{
+   position: relative;
+   transform: translateY(3px) ;
+}
